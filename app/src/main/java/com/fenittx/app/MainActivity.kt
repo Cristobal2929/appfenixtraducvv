@@ -13,6 +13,7 @@ import android.graphics.drawable.GradientDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
@@ -318,7 +319,7 @@ class MainActivity : AppCompatActivity() {
                     val text = matches?.firstOrNull() ?: ""
                     voiceUi?.tvFrench?.text = "Frances: $text"
                     translateAndShow(text) { translated ->
-                        voiceUi?.tvSpanish?.text = "Español: $translated"
+                        voiceUi?.tvSpanish?.text = "Español: $translated
                     }
                     // Continue listening
                     if (isListening) startListening()
